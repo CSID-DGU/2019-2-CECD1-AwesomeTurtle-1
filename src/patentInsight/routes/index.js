@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-
+var request = require('request');
+var fs = require('fs');
 var multer = require('multer');
 var preprocessor = require('../module/preprocess')
 
@@ -10,10 +11,30 @@ router.get('/', function(req, res, next) {
 });
 
 //파일입력
-router.post('/file', multer({ dest: '../../data/'}).single('input_file'), async function(req,res){
+router.post('/file', multer({ dest: '../../data/'}).single('patent'), async function(req,res){
 
-  var csvdata = await preprocessor.readToCsv(req.file.path)
-  res.render('output.html', {csvdata} );
+  var csvpath = await preprocessor.readToCsv(req.file.path)
+  var patent_arr = fs.readFileSync(csvpath, 'utf-8').toString().split("\n");
+
+  const options = {
+    method: "POST",
+    url: "http://db1d2c54.ngrok.io/post",
+    headers: {
+      "Content-Type": "multipart/form-data"
+    },
+    formData : {
+      "test" : fs.createReadStream(csvpath)
+    }
+  };
+
+  request(options, async function (err, body) {
+    if(err) console.log(err);
+    console.log(body.body);
+
+    var dependent_arr = await preprocessor.getDependent(body.body, csvpath)
+    res.render('result.html', {dependent: dependent_arr, patent: patent_arr});
+  })
+
 
 });
 
