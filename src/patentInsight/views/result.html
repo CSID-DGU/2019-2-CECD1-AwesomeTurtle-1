@@ -6,12 +6,34 @@
     <script>
       var pAry = new Array();
       pAry[0]=0;
+
+      var dependent= new Array();
+      dependent[0]=0;
+      dependent[1]=1;
+      dependent[2]=2;
+      dependent[3]=3;
+      dependent[4]=4;
+      dependent[5]=5;
+      dependent[6]=6;
+      dependent[7]=6;
+      dependent[8]=8;
+
+      var patent = new Array();
+      patent[0]='a';
+      patent[1]='a';
+      patent[2]='a';
+      patent[3]='a';
+      patent[4]='a';
+      patent[5]='a';
+      patent[6]='a';
+      patent[7]='a';
+      patent[8]='a';
+
     </script>
   </head>
   <body>
-    <center>
 
-      <h1>독립 청구항과 종속 청구항 분류</h1>
+      <center><h1>독립 청구항과 종속 청구항 분류</h1></center>
       <div style="width:900px; border:1px solid black; margin:auto; padding:10px;">
 
       <script>
@@ -19,19 +41,18 @@
         for(var obj of dependent) {
           i++;
           if(i==0) continue;
-          pAry[i] = pAry[obj]+100;
+          pAry[i] = pAry[obj-1]+100;
         }
 
         i=0;
         for(var obj of patent) {
-          document.write('<div style="padding:'+pAry[i]+'px;">' + patent + '</div>');
+          document.write('<div style="padding-left:'+pAry[i]+'px;">' + obj + '</div>');
           i++;
         }
 
       </script>
 
-      
+
       </div>
-    </center>
   </body>
 </html>
