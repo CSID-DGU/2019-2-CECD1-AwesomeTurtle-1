@@ -3,14 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script>
+      var pAry = new Array();
+      pAry[0]=0;
+    </script>
   </head>
   <body>
     <center>
 
       <h1>독립 청구항과 종속 청구항 분류</h1>
-      <div style=" border:1px solid black; margin:auto; padding:10px;">
-        <%= patent %>
-        <%= dependent %>
+      <div style="width:900px; border:1px solid black; margin:auto; padding:10px;">
+
+      <script>
+        var i=-1;
+        for(var obj of dependent) {
+          i++;
+          if(i==0) continue;
+          pAry[i] = pAry[obj]+100;
+        }
+
+        i=0;
+        for(var obj of patent) {
+          document.write('<div style="padding:'+pAry[i]+'px;">' + patent + '</div>');
+          i++;
+        }
+
+      </script>
+
+      
       </div>
     </center>
   </body>
