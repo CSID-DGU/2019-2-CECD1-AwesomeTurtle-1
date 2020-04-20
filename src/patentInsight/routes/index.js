@@ -18,7 +18,7 @@ router.post('/file', multer({ dest: '../../data/'}).single('patent'), async func
 
   const options = {
     method: "POST",
-    url: "http://db1d2c54.ngrok.io/post",
+    url: "http://3ad4528a.ngrok.io/post",
     headers: {
       "Content-Type": "multipart/form-data"
     },
