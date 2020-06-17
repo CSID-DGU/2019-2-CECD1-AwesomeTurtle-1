@@ -10,6 +10,10 @@ router.get('/', function(req, res, next) {
   res.render('main.html');
 });
 
+router.get('/accomplishment', function(req, res, next) {
+  res.render('accomplish.html');
+});
+
 //파일입력
 router.post('/file', multer({ dest: '../../data/'}).single('patent'), async function(req,res){
 

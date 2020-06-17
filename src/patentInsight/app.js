@@ -4,10 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+var ejs = require('ejs')
 
 var app = express();
+var indexRouter = require('./routes/index');
 
+app.use(express.static(__dirname));
+app.set("views", __dirname+"/views");
+app.set("view engine", "ejs");
+app.engine("html", ejs.renderFile);
+
+/*
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -16,7 +23,7 @@ app.set('view engine', 'jade');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-
+*/
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -29,6 +36,7 @@ app.use('/', indexRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+//
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -40,5 +48,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+var server = app.listen(3000, function() {
+  console.log("server ing");
+})
 
 module.exports = app;
