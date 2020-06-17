@@ -1,2 +1,4 @@
 ######custom ######
 .idea
+./src/patentInsight/views/output.png
+./data
