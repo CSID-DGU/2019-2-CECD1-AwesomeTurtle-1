@@ -25,3 +25,24 @@
 3. 입력된 파일을 통해 result 페이지에서 시각화 결과 확인
 
 4. result 페이지에서 상단에 버튼을 통해 특허 성과지표 시각화 결과 확인
+
+
+* BERT 학습 모델 (특허의 인용관계 분석)
+- - -
+
+https://github.com/duqrlpig/patent_ml_project
+(현재 repository 생성 전 작업해 둔 코드를 url로 첨부합니다)
+
+1. /patent_parser 폴더와 /text_classification_bert 폴더 파일의 코드를 Jupyter Notebook을 통해 실행
+
+2. 각 청구항의 독립(0), 종속(1) 여부 결과를 확인
+
+* Random Forest 학습 모델 (특허의 성과지표 분석)
+- - -
+
+https://github.com/duqrlpig/patent_ml_project
+(현재 repository 생성 전 작업해 둔 코드를 url로 첨부합니다)
+
+1. /rf_project 폴더 파일의 코드를 Jupyter Notebook을 통해 실행
+
+2. 각 성과지표에 영향을 주는 상위 10개 단어 결과 확인

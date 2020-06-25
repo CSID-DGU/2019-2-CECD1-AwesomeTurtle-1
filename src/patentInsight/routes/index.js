@@ -10,6 +10,10 @@ router.get('/', function(req, res, next) {
   res.render('main.html');
 });
 
+router.get('/accomplishment', function(req, res, next) {
+  res.render('accomplish.html');
+});
+
 //파일입력
 router.post('/file', multer({ dest: '../../data/'}).single('patent'), async function(req,res){
 
@@ -18,7 +22,7 @@ router.post('/file', multer({ dest: '../../data/'}).single('patent'), async func
 
   const options = {
     method: "POST",
-    url: "http://db1d2c54.ngrok.io/post",
+    url: "http://1de42408ebf2.ngrok.io/post",
     headers: {
       "Content-Type": "multipart/form-data"
     },
