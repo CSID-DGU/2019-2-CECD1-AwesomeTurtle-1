@@ -1,0 +1,3 @@
+[submodule "src/patent_ml_project"]
+	path = src/patent_ml_project
+	url = https://github.com/duqrlpig/patent_ml_project.git
