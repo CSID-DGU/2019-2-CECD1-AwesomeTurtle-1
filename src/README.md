@@ -5,7 +5,7 @@
 * 웹 어플리케이션 및 서버 실행 방법
 - - -
 
-1. https://github.com/CSID-DGU/2019-2-CECD1-AwesomeTurtle-1의 전체 코드 다운로드
+1. [https://github.com/CSID-DGU/2019-2-CECD1-AwesomeTurtle-1]의 전체 코드 다운로드
 
 2. /src/patentInsight/routes/index.js 와 /src/patentInsight/app.js에 파일에 명시된 npm 모듈 다운로드
 
@@ -30,7 +30,7 @@
 * BERT 학습 모델 (특허의 인용관계 분석)
 - - -
 
-https://github.com/duqrlpig/patent_ml_project
+[https://github.com/duqrlpig/patent_ml_project]
 (현재 repository 생성 전 작업해 둔 코드를 url로 첨부합니다)
 
 1. /patent_parser 폴더와 /text_classification_bert 폴더 파일의 코드를 Jupyter Notebook을 통해 실행
@@ -40,7 +40,7 @@ https://github.com/duqrlpig/patent_ml_project
 * Random Forest 학습 모델 (특허의 성과지표 분석)
 - - -
 
-https://github.com/duqrlpig/patent_ml_project
+[https://github.com/duqrlpig/patent_ml_project]
 (현재 repository 생성 전 작업해 둔 코드를 url로 첨부합니다)
 
 1. /rf_project 폴더 파일의 코드를 Jupyter Notebook을 통해 실행
