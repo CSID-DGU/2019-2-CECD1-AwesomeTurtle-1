@@ -22,7 +22,7 @@ router.post('/file', multer({ dest: '../../data/'}).single('patent'), async func
 
   const options = {
     method: "POST",
-    url: "http://1de42408ebf2.ngrok.io/post",
+    url: "http://3e1cd7bf0240.ngrok.io/post",
     headers: {
       "Content-Type": "multipart/form-data"
     },
@@ -34,10 +34,18 @@ router.post('/file', multer({ dest: '../../data/'}).single('patent'), async func
   request(options, async function (err, body) {
     if(err) console.log(err);
     console.log(body.body);
+    console.log("la?");
 
-    var dependent_arr = await preprocessor.getDependent(body.body, csvpath)
-    res.render('result.html', {dependent: dependent_arr, patent: patent_arr});
-  })
+    var dependent_arr = await preprocessor.getDependent(body.body, csvpath);
+    var render_data = {
+      dependent: dependent_arr,
+       patent: patent_arr
+    };
+
+    console.log(render_data);
+
+    res.render('result.html');
+  });
 
 
 });

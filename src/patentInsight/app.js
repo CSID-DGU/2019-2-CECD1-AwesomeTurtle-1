@@ -16,13 +16,26 @@ app.set('view engine', 'jade');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
+var ejs = require('ejs')
 
+ var app = express();
+ var indexRouter = require('./routes/index');
+
+ app.use(express.static(__dirname));
+ app.set("views", __dirname+"/views");
+ app.set("view engine", "ejs");
+ app.engine("html", ejs.renderFile);
+
+ var server = app.listen(3000, function() {
+    console.log("server ing");
+  })
+/*
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+*/
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
@@ -38,7 +51,8 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  //res.render('error');
 });
+
 
 module.exports = app;
