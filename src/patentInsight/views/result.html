@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script>
+      <% var pAry = new Array(); pAry[0]=0; //pAry[i] %>
+    <!--<script>
       var pAry = new Array();
       pAry[0]=0;
 
-    </script>
+    </script>-->
   </head>
   <body>
 
@@ -16,23 +17,27 @@
       <a href="/accomplishment">성과지표 시각화</a></center>
 
       <div style="width:900px; border:1px solid black; margin:auto; padding:10px;">
-        <script>document.write(patent)</script>
 
-      <script>
-        var i=-1;
-        for(var obj of dependent) {
-          i++;
-          if(i==0) continue;
-          pAry[i] = pAry[obj-1]+100;
-        }
+          <% var i=-1; for(var obj of dependent) { i++; if(i==0) continue; pAry[i] = pAry[obj-1]+100; } i=0; %>
+          <% for(var obj of patent) { %>
+          <div style="padding-left: <%=pAry[i]%>px;"> <%= obj.substr(2) %> </div>
+          <% i++; } %>
 
-        i=0;
-        for(var obj of patent) {
-          document.write('<div style="padding-left:'+pAry[i]+'px;">' + obj + '</div>');
-          i++;
-        }
+          <!--<script>
+            var i=-1;
+            for(var obj of dependent) {
+            i++;
+            if(i==0) continue;
+            pAry[i] = pAry[obj-1]+100;
+            }
 
-      </script>
+            i=0;
+            for(var obj of patent) {
+            document.write('<div style="padding-left:'+pAry[i]+'px;">' + obj + '</div>');
+            i++;
+            }
+
+        </script>-->
 
 
       </div>
