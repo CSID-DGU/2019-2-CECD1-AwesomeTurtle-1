@@ -30,7 +30,9 @@
 * BERT 학습 모델 (특허의 인용관계 분석)
 - - -
 
-[https://github.com/duqrlpig/patent_ml_project]
+/patent_ml_project 폴더에 기존의 작업한 내용을 clone 하였습니다.
+
+원주소: https://github.com/duqrlpig/patent_ml_project
 (현재 repository 생성 전 작업해 둔 코드를 url로 첨부합니다)
 
 1. /patent_parser 폴더와 /text_classification_bert 폴더 파일의 코드를 Jupyter Notebook을 통해 실행
@@ -40,7 +42,9 @@
 * Random Forest 학습 모델 (특허의 성과지표 분석)
 - - -
 
-[https://github.com/duqrlpig/patent_ml_project]
+/patent_ml_project 폴더에 기존의 작업한 내용을 clone 하였습니다.
+
+원주소: https://github.com/duqrlpig/patent_ml_project
 (현재 repository 생성 전 작업해 둔 코드를 url로 첨부합니다)
 
 1. /rf_project 폴더 파일의 코드를 Jupyter Notebook을 통해 실행
