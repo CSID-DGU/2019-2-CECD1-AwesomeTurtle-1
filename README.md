@@ -33,9 +33,11 @@ Family Patent : 패밀리 인용 수(국외)
 - [김민수](https://github.com/duqrlpig): 모델 학습 진행(BERT, 랜덤포레스트)
 
 ## 기타 URL
-학습 모델 코드 <https://github.com/duqrlpig/patent_ml_project>
+* 학습 모델 코드 <https://github.com/duqrlpig/patent_ml_project>
+(학습모델 코드는 해당 깃헙이 개설되기 이전부터 진행되어 또 다른 깃헙 레퍼지토리를 이용하였다. 관련 내용은 다음 URL을 통해 확인할 수 있다. )
 
-*학습모델 코드는 해당 깃헙이 개설되기 이전부터 진행되어 또 다른 깃헙 레퍼지토리를 이용하였다. 관련 내용은 다음 URL을 통해 확인할 수 있다. 
+* 웹 어플리케이션 사용: /src의 README 참조
+* 프로젝트 진행 사황: /docs의 README 참조
 
 ## 파일구조
 해당 깃헙의 구조는 다음과 같다. 

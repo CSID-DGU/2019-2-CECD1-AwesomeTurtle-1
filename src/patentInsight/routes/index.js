@@ -31,6 +31,7 @@ router.post('/file', multer({ dest: '../../data/'}).single('patent'), async func
     }
   };
 
+
   request(options, async function (err, body) {
     if(err) console.log(err);
     console.log(body.body);
@@ -43,8 +44,7 @@ router.post('/file', multer({ dest: '../../data/'}).single('patent'), async func
     };
 
     console.log(render_data);
-
-    res.render('result.html');
+    res.render('result.html',render_data);
   });
 
 
