@@ -1,2 +1,4 @@
-# /docs
-project documents
+# 2019-02, 2020-01 CECD AwesomeTurtle(멋쟁이터틀: 김민수, 박주연, 신예지)
+
+## 특허의 종속 청구항 인식 개선
+
