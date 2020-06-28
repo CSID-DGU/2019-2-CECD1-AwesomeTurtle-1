@@ -26,7 +26,7 @@ var ejs = require('ejs')
  app.set("view engine", "ejs");
  app.engine("html", ejs.renderFile);
 
- var server = app.listen(3000, function() {
+ var server = app.listen(2000, function() {
     console.log("server ing");
   })
 /*
@@ -42,7 +42,7 @@ app.use('/', indexRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
-
+/*
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -53,6 +53,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+*/
 
 module.exports = app;

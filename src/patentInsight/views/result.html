@@ -3,27 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-      <% var pAry = new Array(); pAry[0]=0; //pAry[i] %>
-    <!--<script>
+      <!--<% var pAry = new Array(); pAry[0]=0; //pAry[i] %>-->
+    <script>
       var pAry = new Array();
       pAry[0]=0;
 
-    </script>-->
+    </script>
   </head>
   <body>
 
 
       <center><h1>독립 청구항과 종속 청구항 분류</h1>
-      <a href="/accomplishment">성과지표 시각화</a></center>
+      <a href="/accomplishment">성과지표 시각화 하기</a>
+      <br/>
+
+    </br/>
+      </center>
 
       <div style="width:900px; border:1px solid black; margin:auto; padding:10px;">
 
+
+<!--
           <% var i=-1; for(var obj of dependent) { i++; if(i==0) continue; pAry[i] = pAry[obj-1]+100; } i=0; %>
           <% for(var obj of patent) { %>
           <div style="padding-left: <%=pAry[i]%>px;"> <%= obj.substr(2) %> </div>
-          <% i++; } %>
+          <% i++; } %>-->
 
-          <!--<script>
+          
+          <script>
             var i=-1;
             for(var obj of dependent) {
             i++;
@@ -37,9 +44,9 @@
             i++;
             }
 
-        </script>-->
+        </script>
 
-
+                <a href="output.txt" download>Download Output file</a><br />
       </div>
   </body>
 </html>
